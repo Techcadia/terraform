@@ -107,6 +107,7 @@ func TestPush_noUploadModules(t *testing.T) {
 	defer os.Remove(testStateFileRemote(t, s))
 
 	args := []string{
+		"-vcs=false",
 		"-name=mitchellh/tf-test",
 		"-upload-modules=false",
 		path,
